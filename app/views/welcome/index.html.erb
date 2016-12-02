@@ -1,0 +1,23 @@
+<h1>Shakes</h1>
+
+  <table>
+    <tr>
+      <th>Coordinates</th>
+      <th>Public Id</th>
+      <th>Time</th>
+      <th>Depth</th>
+      <th>Magnitude</th>
+      <th>Locality</th>
+    </tr>
+
+    <% @quakes.each do |shake| %>
+      <tr>
+        <td><%= shake["geometry"]["coordinates"] %></td>
+        <td><%= shake["properties"]["publicID"] %></td>
+        <td><%= shake["properties"]["time"] %></td>
+        <td><%= shake["properties"]["depth"] %></td>
+        <td><%= shake["properties"]["magnitude"] %></td>
+        <td><%= shake["properties"]["locality"] %></td>
+      </tr>
+    <% end %>
+  </table>
